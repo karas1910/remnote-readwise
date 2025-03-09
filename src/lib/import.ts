@@ -76,7 +76,7 @@ const findOrCreateBookRem = async (
     if (book.author) {
       bookRem.setPowerupProperty(powerups.book, bookSlots.author, [book.author]);
     }
-    if (book.readwise_url) {
+    if (book.source_url) {
       addLinkAsSource(plugin, bookRem, book.readwise_url);
     }
     if (book.cover_image_url) {
@@ -197,7 +197,7 @@ const findOrCreateHighlight = async (
       }
     }
   }
-  if (highlight.readwise_url) {
+  if (highlight.url) {
     addLinkAsSource(plugin, highlightRem, highlight.readwise_url);
   }
   return { success: true, data: highlightRem };
